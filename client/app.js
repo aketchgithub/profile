@@ -55,7 +55,7 @@
             }
           })
           .catch(error => {
-            notificationContainer.textContent = 'An error occurred during form submission: ' + error.message;
+            notificationContainer.textContent = 'System jammed at the moment, you can reach us through email or Mobile Phone provided above : ' + error.message;
             notificationContainer.classList.remove('success');
             notificationContainer.classList.add('error');
           });
