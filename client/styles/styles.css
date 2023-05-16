@@ -621,6 +621,19 @@ section {
   display: flex;
   justify-content: flex-start;
 }
+.contact-content-con .right-contact .notification {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+.contact-content-con .right-contact .success {
+  background-color: #4caf50;
+}
+.contact-content-con .right-contact .error {
+  background-color: #f44336;
+}
 
 /*Independed components*/
 .btn-con {

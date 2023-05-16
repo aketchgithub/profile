@@ -1,12 +1,12 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-        origins "*"
+        origins 'http://127.0.0.1:5500', 'http://localhost:3000', 'https://profile-api-tolx.onrender.com'
         # Update this with the appropriate origin URLs
   
-      resource '/contact',
+      resource '*',
         headers: :any,
-        methods: [:get, :post, :head],
-        # expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'] # Add any additional headers you want to expose
+        methods: [:get, :post, :put, :patch, :delete, :options, :head],
+        expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'] # Add any additional headers you want to expose
     end
 
 
