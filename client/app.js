@@ -9,5 +9,29 @@
     });
     document.querySelector(".theme-btn").addEventListener("click", () => {
         document.body.classList.toggle("light-mode");
-    })
-})();
+    });
+    document.querySelector('.contact-form').addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const formData = new FormData(this);
+
+        fetch('http://127.0.0.1:3000/contact', {
+           method: 'POST',
+           body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Form submitted successfully');
+            }
+            else{
+                console.error('Form submission failed');
+            }
+        })
+        .catch(error => {
+            console.error('An error occurred during form submission:' ,error);
+        })
+            
+    });
+
+})
+();
