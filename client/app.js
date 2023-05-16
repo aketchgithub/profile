@@ -55,7 +55,7 @@
             }
           })
           .catch(error => {
-            notificationContainer.textContent = 'System jammed at the moment, you can reach us through email or Mobile Phone provided above : ' + error.message;
+            notificationContainer.textContent = 'Form submission temporarily down at the moment, you can reach us through email or Mobile Phone provided above ';
             notificationContainer.classList.remove('success');
             notificationContainer.classList.add('error');
           });
