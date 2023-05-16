@@ -15,7 +15,7 @@
 
         const formData = new FormData(this);
 
-        fetch('http://127.0.0.1:3000/contact', {
+        fetch('https://profile-api-tolx.onrender.com/contact', {
            method: 'POST',
            body: formData
         })
